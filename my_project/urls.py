@@ -20,6 +20,6 @@ from users import views as user_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('register/', include('users.urls')),
+    path('register/', user_views.register, name="blog-register"),
     path('', include('blog_app.urls')),
 ]
