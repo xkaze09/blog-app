@@ -34,7 +34,7 @@
               <!-- Navbar Right Side -->
               <div class="navbar-nav">
                 {% if user.is_authenticated %}
-                    <span class="navbar-text mr-3">Hi {{ user.username }}!</span>
+                    <a class="nav-item nav-link" href="{% url 'profile' %}">{{ user.username }}</a>
                     <form action="{% url 'logout' %}" method="post" class="nav-item">
                         {% csrf_token %}
                         <button type="submit" class="btn btn-outline-light nav-link">Logout</button>
